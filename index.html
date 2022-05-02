@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Brainiverse: Learning is Exploring</title>
+    <link rel="stylesheet" type="text/css" href="CSS/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"> -->
+    <link rel="shortcut icon" href="textures/foundlogo.ico" />
+    <link href='http://fonts.googleapis.com/css?family=Suranna|Roboto:300' rel='stylesheet' type='text/css'>
+    <audio autoplay src="https://drive.google.com/uc?id=1MDX2XDdknSZL_uucXZPSnJZ0F6cnYV-p">
+    </audio>
+
+    <audio autoplay src="https://drive.google.com/uc?id=1KJJXBHfzvcmwGTGf7R3RWyVeRhof7XBz">
+    </audio>
+    
+    <script>
+        document.addEventListener("click",()=>{document.getElementsByTagName("audio")[0].play()})
+        // document.frames["diviframe"].onload = function(){
+//             var $iframe = document.getElementByID('#diviframe');
+// var childDocument = iframe.contentDocument ? iframe.contentDocument : iframe.contentWindow.document;
+//  childDocument.documentElement.scrollTop = 800;
+    // }
+       
+    </script>
+    <script src='jQuery/jquery.js'></script>
+    <script src='jQuery/tinyScrollBar.js'></script>
+    <script src='jQuery/circleLoad.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+     <script>
+        var rotation = -50;
+
+        function logoTrigger() {
+            return window.setInterval(function() {
+                rotation += 1;
+                $('#circle').rotate(rotation);
+            }, 20);
+        };
+        var logotrigger = logoTrigger();
+    </script>
+        
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <!-- <div class="overlay2"></div> -->
+    <div id="logotitle"> 
+        <!-- <p class="title">B R A I N I V E R S E </p> -->
+        <!-- <div id="subtitle">Learning is a journey..</div> -->
+        <div id="logoswitch">
+            <div id="circle"></div>
+            
+        </div>
+        <div id="loading" class="centered"><h1> LOADING </h1> </div>
+        <div id="start"  style="display:none" class="centered"><h1><a href="#">EXPLORE</a></h1></div>
+    </div>
+
+    <!-- <div id="pointer"></div>
+    <div id='debug'></div> -->
+
+    <div id="overlayer">
+
+      
+       
+
+        <div id="articleGUI" style="display:none"></div>
+
+    
+
+        <div id="circularMenu" class="circular-menu">
+
+            <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');" >
+              <i class="fa fa-circle"></i>
+            </a>
+          
+            <menu class="items-wrapper">
+              <a id="tog" href="#" class="menu-item fa fa-moon-o"  ></a>
+              <a id="fly" href="#" class="menu-item fa fa-rocket"></a>
+              <a id="galaxy" href="#" class="menu-item fa fa-map"></a>
+              <a id="showhistory" href="#" class="menu-item fa fa-history "></a>
+            </menu>
+          
+          </div>
+          
+
+          <div id="circularMenu1" class="circular-menu circular-menu-left" >
+          
+            <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
+              <i class="fa fa-circle"></i>
+            </a>
+          
+            <menu class="items-wrapper">
+             
+              <a id="previ" href="#" class="menu-item fa fa-file-archive-o " ></a>
+              <a id="next" href="#" class="menu-item fa fa-arrow-right"></a>
+              <a id="finish" href="#" class="menu-item fa fa-check"></a>
+              <a id="prev" href="#" class="menu-item fa fa-angle-double-down"></a>
+              <!-- hidesearch hidewiko -->
+            </menu>
+          
+          </div>
+
+        <div id="UIlayer" style="display:none">
+            <!-- <div id="pageTitle">
+                <span id="articlename">Pick an article</span>
+            </div> -->
+            <div id="wikipediaBox">
+                <div id="wikiheader">
+                    <a id='expandarticle' href="#">View fullscreen</a>
+                </div>
+                <div id="wikiInfo"></div>
+            </div>
+           
+
+
+            <!-- <div class="quizes" >
+                <div id="quiz"></div>
+            </div> -->
+                <div id="quizbox">
+                <div class="quizes">
+                    <div id="diviframe">
+                    <iframe id="frame" href="#" src="http://nunzioweb.com/iframes-example.htm" allowtransparency="true" frameborder="0"
+                    style="  height: 90%; width: 90%; background: transparent!important; overflow: hidden;" ></iframe>
+                    </div>                    <!-- onLoad="iframeDidLoad();" -->
+                    <!-- <h5 class="card-text font-weight-bold" id="question"></h5> -->
+                     <br/>
+         
+                   <!-- <div id="quiz">
+                  
+                    <div  id="options">
+                        <button class="btn btn-block btn-outline-success  option" id="options1"></button>
+                        <button class="btn btn-block btn-outline-success  option" id="options2"></button>
+                        <span class='linkSeparator2'></span>
+                        <button class="btn btn-block btn-outline-success  option" id="options3"></button>
+                        <button class="btn btn-block btn-outline-success  option" id="options4"></button>
+                      
+                    </div>
+                   </div> -->
+                </div>
+              </div>
+
+
+           
+
+       
+            <div id="links">
+                <div id="linksheader"> Article links
+                </div>
+                <div id="destination"></div>
+            </div>
+            <div id="history">
+            <div id="linksheader">Previous visits</div>
+                <div id="previousvisits"></div>
+            </div>
+        
+            <!-- <div id="debug">
+                <p></p>
+            </div> -->
+            <div id="searchbar">
+                <form id="searchArticle">
+                    <input type="text" placeholder="🔍 Search for knowledge planets" id="searchvalue">
+                </form>
+                <div id="searchResults"></div>
+            </div>
+          
+            <!-- <div id="legend"></div> -->
+        </div>
+        <!-- <div id="stats"></div> -->
+    </div>
+
+
+    <div id="fullScreenArticle" style="display:none">
+        <div id="fullScreenContent"></div>
+    </div>
+    <div id="close" style='display:none'>
+        <div class="fade">
+            <a href="#">
+                <div>
+                    <img src="textures/icons/back.png" />
+                </div>
+                <div>back</div>
+            </a>
+        </div>
+    </div>
+
+    <div id="noWebGL" style="display:none">
+        <p>Hello, there seems to be a problem with your browser.</p>
+        <!-- <p>WikiGalaxy visualizes wikipedia data in three dimensions. This requires webGL, a cutting edge technology all new web browsers support</p> -->
+        <p>See how you can activate webGL or update your browser here:</p>
+        <a href='http://get.webgl.org' class='warninglink'>http://get.webgl.org</a>
+    </div>
+    
+     <script> $('.title').circleType({radius:520});
+        $('#subtitle').circleType({radius:520,dir:-1});
+        $('#circle').circleProgress({
+    startAngle:-Math.PI/2,
+    thickness:2,
+    value: 1,
+    size:200,
+    animate:false,
+    fill: {gradient:["#f90058","#bf8bff","#07d6a1","#ff9a00","#ffff66","#0292ef"]}
+    });
+
+    </script>
+    <script src='scripts/WebGLtest.js'></script>
+    <script src='scripts/Session.js'></script>
+    <script src='scripts/Stats.js'></script>
+    <script src='scripts/MyWikipediaAPI.js'></script>
+    <script src='scripts/Article.js'></script>
+    <script src='Three/three.js'></script>
+    <script src='Three/stats.js'></script>
+    <script src='scripts/Collisions.js'></script>
+    <script src='Three/THREEx.KeyboardState.js'></script>
+    <script src='Three/THREEx.WindowResize.js'></script>
+    <script src='Three/THREEx.FullScreen.js'></script>
+    <script src='scripts/Galaxy.js'></script>
+    <script src='scripts/OrbitControl.js'></script>
+    <script src='scripts/UI.js'></script>
+    <script src='scripts/main.js'></script>
+    <script src='scripts/quiz.js'></script>
+</body>
+
+</html>
