@@ -58,9 +58,9 @@ UserInterface.prototype.initjQuery = function() {
         }
     });
     $("#searchbar").addClass("visible");
-    $("#circularMenu").addClass("visible");
-    $("#circularMenu1").addClass("visible");
-    $("#circular-menu circular-menu-left").addClass("visible");
+    // $("#circularMenu").addClass("visible");
+    // $("#circularMenu1").addClass("visible");
+    // $("#circular-menu circular-menu-left").addClass("visible");
     $("#pageTitle").addClass("visible");
     $("#wikipediaBox").addClass("visible");
     $("#zoom").addClass("visible");
@@ -114,22 +114,22 @@ UserInterface.prototype.initjQuery = function() {
 
 
 
-    var l= false;
-    $("#circularMenu,#circularMenu1").click(function(){
+    // var l= false;
+    // $("#circularMenu,#circularMenu1").click(function(){
   
-        switch (l) {
-            case true:
-                $("#quizbox").hide();
-                $("#circularMenu1").hide();
-                l = false;
-                break;
-            case false:
-                $("#quizbox").show();
-                $("#circularMenu1").show();
-                l = true;
-                break;
-        }
-    });
+    //     switch (l) {
+    //         case true:
+    //             $("#quizbox").hide();
+    //             $("#circularMenu1").hide();
+    //             l = false;
+    //             break;
+    //         case false:
+    //             $("#quizbox").show();
+    //             $("#circularMenu1").show();
+    //             l = true;
+    //             break;
+    //     }
+    // });
 
 
 
