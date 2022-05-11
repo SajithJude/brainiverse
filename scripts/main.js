@@ -1,11 +1,38 @@
-
-
 window.onload = function() {
 
     index=0;  
+        document.getElementById("ans1").addEventListener("click", checkAns1);
+        document.getElementById("ans2").addEventListener("click", checkAns2);
+        document.getElementById("ans3").addEventListener("click", checkAns3);
+        document.getElementById("ans4").addEventListener("click", checkAns4);
+    
     // $("#circularMenu1").click(function(){
     //     $("menu-item").css("background","red");
     // })
+
+    // function checkAns(event){
+    //     var num = this.ques[index].answer;
+    //     let arg1 = event.target.getAttribute('data-arg1');
+    //     if(num == arg1){
+    //         $('#ans2').fadeOut(500, function(){
+    //             $(this).css('background', "green").fadeIn(500);
+    //             $("#ans4").css('background', "red").fadeIn(500);
+    //         $("#ans1").css('background', "red").fadeIn(500);f
+    //         $("#ans3").css('background', "red").fadeIn(500);
+    
+    
+    //         });
+    //        }else{
+    //         $("#ans4").css('background', "red").fadeIn(500);
+    //         $("#ans1").css('background', "red").fadeIn(500);
+    //         $("#ans3").css('background', "red").fadeIn(500);
+    //         $("#ans2").css('background', "blue").fadeIn(500);
+    //         $(lambar).css('background', "green").fadeIn(500);
+    
+          
+    //         }
+    // }
+
     function checkAns2() {
        let num = 2;
        var numbar = ques[index].answer;
@@ -15,15 +42,21 @@ window.onload = function() {
         $('#ans2').fadeOut(500, function(){
             $(this).css('background', "green").fadeIn(500);
             $("#ans4").css('background', "red").fadeIn(500);
-        $("#ans1").css('background', "red").fadeIn(500);
+        $("#ans1").css('background', "red").fadeIn(500);f
         $("#ans3").css('background', "red").fadeIn(500);
+
 
         });
        }else{
-       
+        $("#ans4").css('background', "red").fadeIn(500);
+        $("#ans1").css('background', "red").fadeIn(500);
+        $("#ans3").css('background', "red").fadeIn(500);
+        $("#ans2").css('background', "blue").fadeIn(500);
+        $(lambar).css('background', "green").fadeIn(500);
+
       
         }
-       index+=1
+       //index+=1
     //    $(this).css('background', "00ffff0d").fadeIn(500);
       }
       function checkAns1() {
@@ -40,9 +73,13 @@ window.onload = function() {
         
             });
          }else{
-         
+        $("#ans4").css('background', "red").fadeIn(500);
+        $("#ans1").css('background', "blue").fadeIn(500);
+        $("#ans3").css('background', "red").fadeIn(500);
+        $("#ans2").css('background', "red").fadeIn(500);
+        $(lambar).css('background', "green").fadeIn(500);
          }
-        index+=1
+        //index+=1
         // $(this).css('background', "00ffff0d").fadeIn(500);
        }
 
@@ -60,12 +97,14 @@ window.onload = function() {
                 // return
             });
         }else{
-            // $("#ans4").css('background', "red").fadeIn(500);
-            // $("#ans2").css('background', "red").fadeIn(500);
-            // $("#ans1").css('background', "red").fadeIn(500);
+            $("#ans4").css('background', "red").fadeIn(500);
+            $("#ans1").css('background', "red").fadeIn(500);
+            $("#ans3").css('background', "blue").fadeIn(500);
+            $("#ans2").css('background', "red").fadeIn(500);
+            $(lambar).css('background', "green").fadeIn(500);
     
          }
-        index+=1
+        //index+=1
      
        }
 
@@ -80,18 +119,19 @@ window.onload = function() {
     
             });
         }else{
-          
+            $("#ans4").css('background', "blue").fadeIn(500);
+            $("#ans1").css('background', "red").fadeIn(500);
+            $("#ans3").css('background', "red").fadeIn(500);
+            $("#ans2").css('background', "red").fadeIn(500);
+            $(lambar).css('background', "green").fadeIn(500);
          }
-        index+=1
-        $(this).css('background',  "00ffff0d").fadeIn(500);
-        document.getElementById("ans1").addEventListener("click", checkAns1);
-        document.getElementById("ans2").addEventListener("click", checkAns2);
-        document.getElementById("ans3").addEventListener("click", checkAns3);
-        document.getElementById("ans4").addEventListener("click", checkAns4);
-    
-    
+        //index+=1
+        //$(this).css('background',  "00ffff0d").fadeIn(500);
+        
+        
        }
-   
+       //checkAns4();
+    }
 
     function e() {
         function e() {
@@ -864,4 +904,4 @@ window.onload = function() {
             $("#searchResults").html('<a class="destlink" id="f' + e + '" href="#">Go to ' + "" + "now </a><br/>")
         })
     })
-}
+
