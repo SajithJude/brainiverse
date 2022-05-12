@@ -1,8 +1,7 @@
 let ques = [
   {
     "question": "<span style=\"color: #eb4924;\">Question 1.</span>  <br><br>\nIndustrially ethyl alcohol is prepared from ethylene by <br><br>\n(a) permanganate oxidation <br><br>\n(b) fermentation <br><br>\n(c) catalytic reduction <br><br>\n(d) absorbing in H<sub>2</sub>S0<sub>4</sub> followed by hydrolysis","answer" : "1"
-    "
-  },
+      },
   {
     "question": "<span style=\"color: #eb4924;\">Question 2.</span>  <br><br>\nFor the sequence of reactions, <br><br>\n<img loading=\"lazy\" class=\"alignnone size-full wp-image-51711\" src=\"https://i1.wp.com/www.cbsetuts.com/wp-content/uploads/2017/12/NEET-Chemistry-Chapter-Wise-Mock-Test-Alcohols-Phenols-and-Ethers-1.png?resize=353%2C34&amp;ssl=1\" alt=\"NEET Chemistry Chapter Wise Mock Test - Alcohols, Phenols and Ethers 1\" srcset=\"https://i1.wp.com/www.cbsetuts.com/wp-content/uploads/2017/12/NEET-Chemistry-Chapter-Wise-Mock-Test-Alcohols-Phenols-and-Ethers-1.png?w=353&amp;ssl=1 353w, https://i1.wp.com/www.cbsetuts.com/wp-content/uploads/2017/12/NEET-Chemistry-Chapter-Wise-Mock-Test-Alcohols-Phenols-and-Ethers-1.png?resize=300%2C29&amp;ssl=1 300w\" sizes=\"(max-width: 353px) 100vw, 353px\" width=\"353\" height=\"34\"> <br><br>\nThe compound A in the sequence is <br><br>\n(a) 2-butanone <br><br>\n(b) acetaldehyde <br><br>\n(c) acetone <br><br>\n(d) propanal","answer" : "1"
   },
