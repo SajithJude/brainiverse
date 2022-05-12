@@ -5,8 +5,8 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Brainiverse: Learning is Exploring</title>
     <link rel="stylesheet" type="text/css" href="CSS/stylesheet.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css">
     <link rel="shortcut icon" href="textures/foundlogo.ico" />
     <link href='http://fonts.googleapis.com/css?family=Suranna|Roboto:300' rel='stylesheet' type='text/css'>
     <audio autoplay src="https://drive.google.com/uc?id=1MDX2XDdknSZL_uucXZPSnJZ0F6cnYV-p">
@@ -17,6 +17,9 @@
     
     <script>
         document.addEventListener("click",()=>{document.getElementsByTagName("audio")[0].play()})
+
+
+    
         // document.frames["diviframe"].onload = function(){
 //             var $iframe = document.getElementByID('#diviframe');
 // var childDocument = iframe.contentDocument ? iframe.contentDocument : iframe.contentWindow.document;
@@ -70,14 +73,14 @@
 
     
 
-        <div id="circularMenu" class="circular-menu">
+        <div id="circularMenu" class="circular-menu" >
 
-            <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');" >
-              <i class="fa fa-circle"></i>
+            <a class="floating-btn"    >
+              <i class="fa-solid fa-circle"></i>
             </a>
           
             <menu class="items-wrapper">
-              <a id="tog" href="#" class="menu-item fa fa-moon-o"  ></a>
+              <a id="taggle" href="#" class="menu-item fa fa-moon"  ></a>
               <a id="fly" href="#" class="menu-item fa fa-rocket"></a>
               <a id="galaxy" href="#" class="menu-item fa fa-map"></a>
               <a id="showhistory" href="#" class="menu-item fa fa-history "></a>
@@ -86,19 +89,24 @@
           </div>
           
 
-          <div id="circularMenu1" class="circular-menu circular-menu-left" >
+          <div id="circularMenu1" class="circular-menu circular-menu-left" onclick="display()" >
           
-            <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
-              <i class="fa fa-circle"></i>
+            <a class="floating-btn"  >
+              <i class="fa-solid fa-circle"></i>
             </a>
           
             <menu class="items-wrapper">
-             
-              <a id="previ" href="#" class="menu-item fa fa-file-archive-o " ></a>
-              <a id="next" href="#" class="menu-item fa fa-arrow-right"></a>
-              <a id="finish" href="#" class="menu-item fa fa-check"></a>
-              <a id="prev" href="#" class="menu-item fa fa-angle-double-down"></a>
+                
+              <a id="ans1" href="#" class="menu-item fa-solid fa-a"></a>
+              <a id="ans2" href="#" class="menu-item fa-solid fa-b"></a>
+              <a id="ans3" href="#" class="menu-item fa-solid fa-c"></a>
+              <a id="ans4" href="#" class="menu-item fa solid fa-d"></a>
               <!-- hidesearch hidewiko -->
+
+              <!-- <a id="ans1" href="#" class="menu-item fa-solid fa-a" onclick="checkAns('1')"></a>
+              <a id="ans2" href="#" class="menu-item fa-solid fa-b" onclick="checkAns('2')"></a>
+              <a id="ans3" href="#" class="menu-item fa-solid fa-c" onclick="checkAns('3')"></a>
+              <a id="ans4" href="#" class="menu-item fa solid fa-d" onclick="checkAns('4')"></a> -->
             </menu>
           
           </div>
@@ -119,26 +127,15 @@
             <!-- <div class="quizes" >
                 <div id="quiz"></div>
             </div> -->
-                <div id="quizbox">
+                <div id="quizbox"  onclick="taggle()">
                 <div class="quizes">
-                    <div id="diviframe">
-                    <iframe id="frame" href="#" src="http://nunzioweb.com/iframes-example.htm" allowtransparency="true" frameborder="0"
-                    style="  height: 90%; width: 90%; background: transparent!important; overflow: hidden;" ></iframe>
-                    </div>                    <!-- onLoad="iframeDidLoad();" -->
-                    <!-- <h5 class="card-text font-weight-bold" id="question"></h5> -->
-                     <br/>
-         
-                   <!-- <div id="quiz">
+                   <!-- lass="card-text font-weight-bold" id="question"></h5> --> 
+                     <!-- <br/>
+          -->
+                   <div id="quiz">
                   
-                    <div  id="options">
-                        <button class="btn btn-block btn-outline-success  option" id="options1"></button>
-                        <button class="btn btn-block btn-outline-success  option" id="options2"></button>
-                        <span class='linkSeparator2'></span>
-                        <button class="btn btn-block btn-outline-success  option" id="options3"></button>
-                        <button class="btn btn-block btn-outline-success  option" id="options4"></button>
-                      
-                    </div>
-                   </div> -->
+                   
+                   </div>
                 </div>
               </div>
 

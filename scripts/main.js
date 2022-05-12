@@ -1,6 +1,143 @@
 
 
 window.onload = function() {
+
+    index=0;  
+        document.getElementById("ans1").addEventListener("click", checkAns1);
+        document.getElementById("ans2").addEventListener("click", checkAns2);
+        document.getElementById("ans3").addEventListener("click", checkAns3);
+        document.getElementById("ans4").addEventListener("click", checkAns4);
+    
+    // $("#circularMenu1").click(function(){
+    //     $("menu-item").css("background","red");
+    // })
+
+    // function checkAns(event){
+    //     colsole.log(event);
+    //     var num = this.ques[index].answer;
+    //     let arg1 = event.target.getAttribute('data-arg1');
+    //     if(num == arg1){
+    //         $('#ans2').fadeOut(500, function(){
+    //             $(this).css('background', "green").fadeIn(500);
+    //             $("#ans4").css('background', "red").fadeIn(500);
+    //         $("#ans1").css('background', "red").fadeIn(500);f
+    //         $("#ans3").css('background', "red").fadeIn(500);
+    
+    
+    //         });
+    //        }else{
+    //         $("#ans4").css('background', "red").fadeIn(500);
+    //         $("#ans1").css('background', "red").fadeIn(500);
+    //         $("#ans3").css('background', "red").fadeIn(500);
+    //         $("#ans2").css('background', "blue").fadeIn(500);
+    //         $(lambar).css('background', "green").fadeIn(500);
+    
+    //         }
+    // }
+
+    function checkAns2() {
+       let num = 2;
+       var numbar = ques[index].answer;
+       var pumbar = "#ans"
+       var lambar= pumbar+numbar;
+       if(num == ques[index].answer){
+        $('#ans2').fadeOut(500, function(){
+            $(this).css('background', "green").fadeIn(500);
+            $("#ans4").css('background', "red").fadeIn(500);
+        $("#ans1").css('background', "red").fadeIn(500);f
+        $("#ans3").css('background', "red").fadeIn(500);
+
+
+        });
+       }else{
+        $("#ans4").css('background', "red").fadeIn(500);
+        $("#ans1").css('background', "red").fadeIn(500);
+        $("#ans3").css('background', "red").fadeIn(500);
+        $("#ans2").css('background', "blue").fadeIn(500);
+        $(lambar).css('background', "green").fadeIn(500);
+
+      
+        }
+       //index+=1
+    //    $(this).css('background', "00ffff0d").fadeIn(500);
+      }
+      function checkAns1() {
+        let num = 1;
+        var numbar = ques[index].answer;
+        var pumbar = "#ans"
+        var lambar= pumbar+numbar;
+        if(num == ques[index].answer){
+            $('#ans1').fadeIn(500, function(){
+                $(this).css('background', "green").fadeIn(500);
+                $("#ans4").css('background', "red").fadeIn(500);
+                $("#ans2").css('background', "red").fadeIn(500);
+                $("#ans3").css('background', "red").fadeIn(500);
+        
+            });
+         }else{
+        $("#ans4").css('background', "red").fadeIn(500);
+        $("#ans1").css('background', "blue").fadeIn(500);
+        $("#ans3").css('background', "red").fadeIn(500);
+        $("#ans2").css('background', "red").fadeIn(500);
+        $(lambar).css('background', "green").fadeIn(500);
+         }
+        //index+=1
+        // $(this).css('background', "00ffff0d").fadeIn(500);
+       }
+
+       function checkAns3() {
+        let num = 3;
+        var numbar = ques[index].answer;
+        var pumbar = "#ans"
+        var lambar= pumbar+numbar;
+        if(num == ques[index].answer){
+            $('#ans3').fadeOut(500, function(){
+                $(this).css('background',  "green").fadeIn(500);
+                $("#ans4").css('background', "red").fadeIn(500);
+                $("#ans2").css('background', "red").fadeIn(500);
+                $("#ans1").css('background', "red").fadeIn(500);
+                // return
+            });
+        }else{
+            $("#ans4").css('background', "red").fadeIn(500);
+            $("#ans1").css('background', "red").fadeIn(500);
+            $("#ans3").css('background', "blue").fadeIn(500);
+            $("#ans2").css('background', "red").fadeIn(500);
+            $(lambar).css('background', "green").fadeIn(500);
+    
+         }
+        //index+=1
+     
+       }
+
+       function checkAns4() {
+        let num = 4;
+        var numbar = ques[index].answer;
+        var pumbar = "#ans"
+        var lambar= pumbar+numbar;
+        if(num == ques[index].answer){
+            $('#ans4').fadeOut(500, function(){
+                $(this).css('background',  "green").fadeIn(500);
+                $("#ans1").css('background', "red").fadeIn(500);
+            $("#ans2").css('background', "red").fadeIn(500);
+            $("#ans3").css('background', "red").fadeIn(500);
+    
+            });
+        }else{
+            $("#ans4").css('background', "blue").fadeIn(500);
+            $("#ans1").css('background', "red").fadeIn(500);
+            $("#ans3").css('background', "red").fadeIn(500);
+            $("#ans2").css('background', "red").fadeIn(500);
+            $(lambar).css('background', "green").fadeIn(500);
+         }
+        //index+=1
+        //$(this).css('background',  "00ffff0d").fadeIn(500);
+        
+        
+       }
+       //checkAns4();
+   
+
     function e() {
         function e() {
             var e = window.innerWidth / 2;
@@ -10,11 +147,14 @@ window.onload = function() {
             h.setSize(window.innerWidth, window.innerHeight)
         }
 
-    
-            // var $contents = $('#frame').contents();
-            // console.log($contents);
-            // $contents.scrollTop($contents.height());
-    
+  
+         $("#circularMenu").click(function() {
+            $("#items-wrapper").toggle();
+            console.log("circular jqwery clicked ")
+            $("#quizbox").toggle();
+            console.log("quizes jqwery toggled ")
+
+        });
 
         function t(e) {
             e.preventDefault();
@@ -27,9 +167,10 @@ window.onload = function() {
             if (m.getSystem()) {
                 if (j === "START") {
                    
-                    $("#circularMenu1").show();
-                    $("#circular-menu").show();
-                    document.getElementById('circularMenu').classList.toggle('active');
+                    // $("#circularMenu1").hide();
+                    // $("#circular-menu").show();
+                    // document.getElementById('circularMenu').classList.toggle('active');
+                    // console.log("class list toggled active")
                     n = b.intersects(l, F, I, m.getSystem());
                     $("#history").hide();
                     console.log("hiden history");
@@ -605,9 +746,19 @@ window.onload = function() {
     var G;
     e();
     a();
+
+    $("#taggle").click(function()
+    {
+        document.getElementById('circularMenu').classList.toggle('block');
+        document.getElementById('circularMenu1').classList.toggle('block');
+        document.getElementById('quizbox').classList.toggle('block');
+    });
+
+
     $("#start").click(function() {
         document.getElementById('circularMenu').classList.toggle('active');
         document.getElementById('circularMenu1').classList.toggle('active');
+        document.getElementById('quizbox').classList.toggle('active');
         $("searchbar").hide();
         $("#history").hide();
         y.intro();
