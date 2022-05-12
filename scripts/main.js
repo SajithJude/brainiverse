@@ -1,3 +1,5 @@
+
+
 window.onload = function() {
 
     index=0;  
@@ -11,6 +13,7 @@ window.onload = function() {
     // })
 
     // function checkAns(event){
+    //     colsole.log(event);
     //     var num = this.ques[index].answer;
     //     let arg1 = event.target.getAttribute('data-arg1');
     //     if(num == arg1){
@@ -29,7 +32,6 @@ window.onload = function() {
     //         $("#ans2").css('background', "blue").fadeIn(500);
     //         $(lambar).css('background', "green").fadeIn(500);
     
-          
     //         }
     // }
 
@@ -110,6 +112,9 @@ window.onload = function() {
 
        function checkAns4() {
         let num = 4;
+        var numbar = ques[index].answer;
+        var pumbar = "#ans"
+        var lambar= pumbar+numbar;
         if(num == ques[index].answer){
             $('#ans4').fadeOut(500, function(){
                 $(this).css('background',  "green").fadeIn(500);
@@ -131,7 +136,7 @@ window.onload = function() {
         
        }
        //checkAns4();
-    }
+   
 
     function e() {
         function e() {
@@ -904,4 +909,4 @@ window.onload = function() {
             $("#searchResults").html('<a class="destlink" id="f' + e + '" href="#">Go to ' + "" + "now </a><br/>")
         })
     })
-
+}
