@@ -2,11 +2,21 @@
 
 window.onload = function() {
 
+    // const joy = new JoyStick('joystick')
+
     index=0;  
         document.getElementById("ans1").addEventListener("click", checkAns1);
         document.getElementById("ans2").addEventListener("click", checkAns2);
         document.getElementById("ans3").addEventListener("click", checkAns3);
         document.getElementById("ans4").addEventListener("click", checkAns4);
+
+
+
+        // function show_hide() {
+        //     document.getElementById(circularMenu).style.visibility='hidden';
+        //     console.log("show hide truggered");
+
+        // }
     
     // $("#circularMenu1").click(function(){
     //     $("menu-item").css("background","red");
@@ -35,6 +45,8 @@ window.onload = function() {
     //         }
     // }
 
+    var points = 10;
+
     function checkAns2() {
        let num = 2;
        var numbar = ques[index].answer;
@@ -46,7 +58,9 @@ window.onload = function() {
             $("#ans4").css('background', "red").fadeIn(500);
         $("#ans1").css('background', "red").fadeIn(500);f
         $("#ans3").css('background', "red").fadeIn(500);
-
+        
+        points+=1;
+        $("#points").html(points);
 
         });
        }else{
@@ -56,9 +70,11 @@ window.onload = function() {
         $("#ans2").css('background', "blue").fadeIn(500);
         $(lambar).css('background', "green").fadeIn(500);
 
+        points-=1;
+        $("#points").html(points);
       
         }
-       //index+=1
+       index+=1
     //    $(this).css('background', "00ffff0d").fadeIn(500);
       }
       function checkAns1() {
@@ -72,16 +88,23 @@ window.onload = function() {
                 $("#ans4").css('background', "red").fadeIn(500);
                 $("#ans2").css('background', "red").fadeIn(500);
                 $("#ans3").css('background', "red").fadeIn(500);
+
+                points+=1;
+                $("#points").html(points);
         
-            });
+        });
          }else{
         $("#ans4").css('background', "red").fadeIn(500);
         $("#ans1").css('background', "blue").fadeIn(500);
         $("#ans3").css('background', "red").fadeIn(500);
         $("#ans2").css('background', "red").fadeIn(500);
         $(lambar).css('background', "green").fadeIn(500);
+
+        points-=1;
+        $("#points").html(points);
+
          }
-        //index+=1
+        index+=1
         // $(this).css('background', "00ffff0d").fadeIn(500);
        }
 
@@ -97,6 +120,10 @@ window.onload = function() {
                 $("#ans2").css('background', "red").fadeIn(500);
                 $("#ans1").css('background', "red").fadeIn(500);
                 // return
+
+                points+=1;
+                $("#points").html(points);
+
             });
         }else{
             $("#ans4").css('background', "red").fadeIn(500);
@@ -104,9 +131,12 @@ window.onload = function() {
             $("#ans3").css('background', "blue").fadeIn(500);
             $("#ans2").css('background', "red").fadeIn(500);
             $(lambar).css('background', "green").fadeIn(500);
+
+            points-=1;
+            $("#points").html(points);
     
          }
-        //index+=1
+        index+=1
      
        }
 
@@ -121,21 +151,28 @@ window.onload = function() {
                 $("#ans1").css('background', "red").fadeIn(500);
             $("#ans2").css('background', "red").fadeIn(500);
             $("#ans3").css('background', "red").fadeIn(500);
+
+            points+=1;
+            $("#points").html(points);
     
-            });
+        });
         }else{
             $("#ans4").css('background', "blue").fadeIn(500);
             $("#ans1").css('background', "red").fadeIn(500);
             $("#ans3").css('background', "red").fadeIn(500);
             $("#ans2").css('background', "red").fadeIn(500);
             $(lambar).css('background', "green").fadeIn(500);
-         }
-        //index+=1
+
+            points-=1;
+            $("#points").html(points);
+        }
+        index+=1
         //$(this).css('background',  "00ffff0d").fadeIn(500);
         
         
        }
        //checkAns4();
+    //    index++
    
 
     function e() {
@@ -151,10 +188,13 @@ window.onload = function() {
          $("#circularMenu").click(function() {
             $("#items-wrapper").toggle();
             console.log("circular jqwery clicked ")
-            $("#quizbox").toggle();
+            // $("#quizbox").toggle();
             console.log("quizes jqwery toggled ")
 
         });
+
+        //Did May 14 12:07 Bajanan 
+     
 
         function t(e) {
             e.preventDefault();
@@ -173,7 +213,10 @@ window.onload = function() {
                     // console.log("class list toggled active")
                     n = b.intersects(l, F, I, m.getSystem());
                     $("#history").hide();
-                    console.log("hiden history");
+                    $("#searchbar").hide();
+                    $("#wikipediaBox").hide();
+                    $("#links").hide();
+                    // console.log("hiden history");
                     n = m.getTrueID(n);
                     m.setTargetPosition(e.clientX - window.innerWidth / 2, -e.clientY + window.innerHeight / 2);
                     if (n.length > 0) {
@@ -747,17 +790,38 @@ window.onload = function() {
     e();
     a();
 
-    $("#taggle").click(function()
+
+//     $("#circularMenu1").click(function()
+//     {
+//     // $("#quizbox").toggle();
+//     console.log("left cicle menue working")
+// });
+
+
+
+
+
+    $("#circularMenu").click(function()
     {
-        document.getElementById('circularMenu').classList.toggle('block');
-        document.getElementById('circularMenu1').classList.toggle('block');
-        document.getElementById('quizbox').classList.toggle('block');
+        document.getElementById('circularMenu').classList.toggle('active');
+        document.getElementById('circularMenu1').classList.toggle('active');
+        $("#searchbar").toggle();
+        $("#links").toggle();
+        $("#wikipediaBox").toggle();
+        
+        // $("#quizbox").toggle();
+
+        // $("#flybutton").show();
+
+
+
     });
 
 
     $("#start").click(function() {
-        document.getElementById('circularMenu').classList.toggle('active');
-        document.getElementById('circularMenu1').classList.toggle('active');
+        
+
+
         document.getElementById('quizbox').classList.toggle('active');
         $("searchbar").hide();
         $("#history").hide();
@@ -854,6 +918,20 @@ window.onload = function() {
         }
     });
     $("#fly").click(function() {
+
+
+
+
+        
+            // $("#circularMenu").toggle();
+            // console.log("flt button toggled  ")
+           
+
+
+
+
+
+        
         if (j === "CENTER") {
             n(R.getId())
         } else {
