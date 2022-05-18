@@ -16,8 +16,17 @@
     </audio>
     
     <script>
-        document.addEventListener("click",()=>{document.getElementsByTagName("audio")[0].play()})
+        document.addEventListener("click",()=>{document.getElementsByTagName("audio")[0].play()});
 
+        function hidestuff() {
+  var x = document.getElementById("circularMenu1");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+        // document.getElementById('circularMenu').addEventListener('click', hidestuff);
 
     
         // document.frames["diviframe"].onload = function(){
@@ -73,9 +82,9 @@
 
     
 
-        <div id="circularMenu" class="circular-menu" >
+        <div id="circularMenu" class="circular-menu" onclick="hidestuff()">
 
-            <a class="floating-btn"    >
+            <a class="floating-btn"  document.getElementById('circularMenu').classList.toggle('active')  >
               <i class="fa-solid fa-circle"></i>
             </a>
           
@@ -87,11 +96,16 @@
             </menu>
           
           </div>
+          <div id="joystick" class="circular-menu">
+            <a class="floating-btn"    >
+                <i class="fa-solid fa-circle"></i>
+              </a>
+          </div>
           
 
           <div id="circularMenu1" class="circular-menu circular-menu-left" onclick="display()" >
           
-            <a class="floating-btn"  >
+            <a class="floating-btn" document.getElementById('circularMenu').classList.toggle('active');  >
               <i class="fa-solid fa-circle"></i>
             </a>
           
@@ -121,36 +135,35 @@
                 </div>
                 <div id="wikiInfo"></div>
             </div>
-           
 
-
-            <!-- <div class="quizes" >
-                <div id="quiz"></div>
-            </div> -->
-                <div id="quizbox"  onclick="taggle()">
+            <div id="quizbox">
                 <div class="quizes">
-                   <!-- lass="card-text font-weight-bold" id="question"></h5> --> 
-                     <!-- <br/>
-          -->
-                   <div id="quiz">
-                  
-                   
-                   </div>
+                    <div id="quiz"></div>
                 </div>
-              </div>
+                <div class="score_name">
+                    <div id="score_name"><p><strong>Score Card</strong></p></div>
+                    <div id="score">
+                        <hr>
+                        <p>You have</p>
+                        <div id="points"> </div>
+                        <p>Points</p>
+                    </div>
+                </div>
+            </div>
 
-
-           
-
-       
             <div id="links">
-                <div id="linksheader"> Article links
-                </div>
+                <div id="linksheader"> Article links</div>
                 <div id="destination"></div>
             </div>
+
+
             <div id="history">
             <div id="linksheader">Previous visits</div>
                 <div id="previousvisits"></div>
+            </div>
+
+
+            <div>
             </div>
         
             <!-- <div id="debug">
@@ -218,6 +231,7 @@
     <script src='scripts/UI.js'></script>
     <script src='scripts/main.js'></script>
     <script src='scripts/quiz.js'></script>
+    <script src='scripts/joy.js'></script>
 </body>
 
 </html>
